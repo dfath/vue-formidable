@@ -1,0 +1,33 @@
+{
+  "name": "vue-formidable",
+  "version": "0.1.0",
+  "description": "Sensible form validation for VueJS",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack -w",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhyek/vue-formidable.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "form",
+    "validation"
+  ],
+  "author": "https://github.com/rhyek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhyek/vue-formidable/issues"
+  },
+  "homepage": "https://github.com/rhyek/vue-formidable#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.1.8",
+    "webpack": "^2.2.1"
+  }
+}
