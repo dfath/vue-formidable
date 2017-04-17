@@ -1,13 +1,13 @@
 import Validator from 'classes/Validator'
-import IDictionary from 'interfaces/IDictionary'
+import PartialDictionary from 'types/PartialDictionary'
 
-const defaultDictionary: IDictionary = {
+const defaultDictionary: PartialDictionary = {
   en: 'This field is required',
   es: 'El campo es requerido'
 }
 
 export class Required extends Validator {
-  constructor (dictionary?: string|IDictionary) {
+  constructor (dictionary?: string|PartialDictionary) {
     super(dictionary || defaultDictionary)
     this.stopValidation = true
   }
@@ -17,6 +17,6 @@ export class Required extends Validator {
   }
 }
 
-export function required (dictionary?: string|IDictionary) {
+export function required (dictionary?: string|PartialDictionary) {
   return new Required(dictionary)
 }

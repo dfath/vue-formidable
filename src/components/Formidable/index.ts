@@ -29,7 +29,8 @@ export default class extends Vue {
           let validators = rules ? rules[key] : null
           if (value instanceof Object && !(value instanceof Array)) {
             form.fields[key] = makeForm(value, <Rules> validators)
-          } else {
+          }
+          else {
             if (validators instanceof Validator) {
               validators = [validators]
             }
@@ -59,7 +60,8 @@ export default class extends Vue {
   submit (): void {
     this.submitted = true
     this.validate()
-    if (this.form.isValid)
+    if (this.form.isValid) {
       this.$emit('submit')
+    }
   }
 }

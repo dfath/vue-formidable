@@ -41,7 +41,8 @@ export default class Field extends Vue implements IsValid {
             if (validator.stopValidation) {
               break
             }
-          } else {
+          }
+          else {
             throw e
           }
         }

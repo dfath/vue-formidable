@@ -1,12 +1,12 @@
 import ValidationError from 'exceptions/ValidationError'
 import TranslationNotFound from 'exceptions/TranslationNotFound'
-import IDictionary from 'interfaces/IDictionary'
+import PartialDictionary from 'types/PartialDictionary'
 import config from 'config'
 
 class Validator {
   stopValidation = false
 
-  constructor (readonly dictionary: string|IDictionary) {}
+  constructor (readonly dictionary: string|PartialDictionary) {}
 
   protected isValid (value: any): boolean {
     throw new Error('Not implemented')

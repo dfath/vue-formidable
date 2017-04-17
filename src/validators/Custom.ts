@@ -1,5 +1,5 @@
 import Validator from 'classes/Validator'
-import IDictionary from 'interfaces/IDictionary'
+import PartialDictionary from 'types/PartialDictionary'
 
 interface IValidatorFunction {
   (value: any): boolean
@@ -8,7 +8,7 @@ interface IValidatorFunction {
 export class Custom extends Validator {
   validator: IValidatorFunction
 
-  constructor (validator: IValidatorFunction, dictionary: string|IDictionary) {
+  constructor (validator: IValidatorFunction, dictionary: string|PartialDictionary) {
     super(dictionary)
     this.validator = validator
   }
@@ -18,6 +18,6 @@ export class Custom extends Validator {
   }
 }
 
-export function custom (validator: IValidatorFunction, dictionary: string|IDictionary) {
+export function custom (validator: IValidatorFunction, dictionary: string|PartialDictionary) {
   return new Custom(validator, dictionary)
 }

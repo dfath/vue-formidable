@@ -1,6 +1,6 @@
-import IConfiguration from 'interfaces/IConfiguration'
+import Configuration from 'interfaces/Configuration'
 
-const configuration: IConfiguration = {
+const configuration: Configuration = {
   language: 'en'
 }
 

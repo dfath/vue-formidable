@@ -1,7 +1,7 @@
 import Validator from 'classes/Validator'
-import IDictionary from 'interfaces/IDictionary'
+import PartialDictionary from 'types/PartialDictionary'
 
-const defaultDictionary: IDictionary = {
+const defaultDictionary: PartialDictionary = {
   en: 'Must be at least {min}',
   es: 'Debe ser al menos {min}'
 }
@@ -9,7 +9,7 @@ const defaultDictionary: IDictionary = {
 export class Min extends Validator {
   min: number
 
-  constructor (min: number, dictionary?: string|IDictionary) {
+  constructor (min: number, dictionary?: string|PartialDictionary) {
     super(dictionary || defaultDictionary)
     this.min = min
   }
@@ -25,6 +25,6 @@ export class Min extends Validator {
   }
 }
 
-export function min (min: number, dictionary?: string|IDictionary) {
+export function min (min: number, dictionary?: string|PartialDictionary) {
   return new Min(min, dictionary)
 }
