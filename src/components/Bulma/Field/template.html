@@ -1,0 +1,12 @@
+<div class="field" @focusout="field.focusedOut = true">
+  <label v-if="label" class="label">{{ label }}</label>
+  <p class="control" :class="{ 'has-icon has-icon-right': withIcon }">
+    <slot></slot>
+    <span v-if="withIcon && !field.isValid" class="icon is-small">
+      <i class="fa fa-warning"></i>
+    </span>
+  </p>
+  <p v-for="error of field.errors" class="help is-danger">
+    {{ error }}
+  </p>
+</div>
